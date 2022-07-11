@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.active, nav a:hover {
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+header {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 50px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    font-weight: 500;
+    padding: 5px;
+    font-size: 38px;
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav {
+    padding: 0 25px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+.sociais i {
+    padding: 0px 5px;
+}
+
+.slider {
+    width: 100vw;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.slider--width {
+    height: 100%;
+    display: flex;
+    transition: all ease 0.3s;
+}
+
+.slider--item {
+    width: 100vw;
+    height: inherit;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    text-shadow: 0px 1px 1px #333;
+    font-size: 50px;
+}
+
+.slider--controls {
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+}
+
+.slider--control {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+section { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 406px) and (max-width: 550px) {
+    .container {
+        width: auto;
+    }
+    .logo h1 {
+        font-size: 25px;
+    }
+    nav ul li {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .slider--item {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 405px) {
+    .logo h1 {
+        font-size: 28px;
+    }
+    nav {
+        display: none;
+    }
+    .slider--item {
+        font-size: 18px;
+    }
+}
